@@ -29,5 +29,5 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=PACKAGE_INSTALL_REQUIRES,
-    python_requires=">=3.0",
+    python_requires=">=3.8",
 )
