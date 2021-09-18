@@ -4,7 +4,7 @@ from zeep.helpers import serialize_object
 from epttavm_sdk.objects import ProductItem
 
 
-class ePttAVMClient:
+class EPttAVMClient:
     BASE_URL = "https://ws.pttavm.com:93/service.svc/service?wsdl"
     CLIENT_SETTINGS = Settings(
         strict=False, xml_huge_tree=True, xsd_ignore_sequence_order=True)
