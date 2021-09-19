@@ -39,13 +39,13 @@ class EPttAVMClient:
         return response['category_tree']['Category']
 
     def siparis_kontrol_listesi_v2(self, baslangic_tarihi: str, bitis_tarihi: str, aktif_siparisler: int):
-        response = serialize_object(self._service.GetCategoryTree(
+        response = serialize_object(self._service.SiparisKontrolListesiV2(
             BaslangicTarihi=baslangic_tarihi, BitisTarihi=bitis_tarihi, aktif_siparisler=aktif_siparisler))
         return response
 
     def stok_guncelle_v2(self, product_item: ProductItem):
         response = serialize_object(
-            self._service.GetCategoryTree(product_item.as_request_param()))
+            self._service.StokGuncelleV2(product_item.as_request_param()))
         return response
 
     def stok_fiyat_guncelle_v3(self, shop_id, barkod, fiyat=None, miktar=None, kdv_oran=None, iskonto=None):
@@ -59,7 +59,7 @@ class EPttAVMClient:
         if iskonto:
             data['Iskonto'] = iskonto
         if data:
-            response = serialize_object(self._service.GetCategoryTree(
+            response = serialize_object(self._service.StokFiyatGuncelle3(
                 shop_id=shop_id, barkod=barkod, **data))
             return response
 

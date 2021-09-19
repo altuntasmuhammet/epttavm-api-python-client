@@ -64,7 +64,7 @@ class ProductItem(dict):
                  kdv_oran: float, kdvsiz: float, mevcut: bool, miktar: int, shop_id: int,
                  tag: str, urun_adi: str, uzun_aciklama: str,
                  urun_resimleri: List[UrunResim], variant_listesi: List[Variant],
-                 garanti_veren_firma: str = None, iskonto: float = 0, kategori_bilgisini_guncelle: Literal[0, 1] = 0,
+                 garanti_veren_firma: str = None, iskonto: float = 0, kategori_bilgisini_guncelle: Literal[1, 0] = 0,
                  tedarikci_alt_kategori_adi: str = "", tedarikci_alt_kategori_id: int = 0,
                  tedarikci_sanal_kategori_id: int = 0, urun_id: int = 0, urun_url: str = None):
         self.aciklama = aciklama
